@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Daily Habits - Energo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🌱 Energo</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="daily-habits.html" class="active">My Daily Habits</a></li>
+        <li><a href="goals.html">My Goals</a></li>
+        <li><a href="eco-tips.html">Eco Tips</a></li>
+        <li><a href="context.html">Project Context</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>My Daily Habits</h1>
+      <p>
+        Use this page to record your sustainable actions throughout the day.
+        Small choices, like switching off unnecessary lights, taking shorter showers,
+        or sorting waste properly, help reduce resource use and your environmental impact.
+      </p>
+      <p>
+        Every habit you tick generates <strong>eco-points</strong>. In a real programme,
+        these points could be converted into <strong>discounts at partner supermarkets</strong>,
+        <strong>rewards linked to recycling</strong>, or <strong>exclusive benefits</strong>
+        through green partnerships.
+      </p>
+    </div>
+
+    <div class="hero-image">
+      <img src="img/daily-habits.png" alt="People practicing sustainable daily habits">
+    </div>
+  </section>
+
+  <!-- DAILY HABIT TRACKER -->
+  <section>
+    <h2>Daily Habit Tracker</h2>
+    <p class="why-intro">
+      Select the actions you completed today. Each action adds eco-points to your daily total.
+      Over time, your daily eco-points contribute to your weekly and monthly reward levels.
+    </p>
+
+    <div class="tracker-layout">
+      
+      <!-- Habit list -->
+      <div class="tracker-habits">
+        <h3>Today I have...</h3>
+        <ul class="habit-list">
+          <li>
+            <label>
+              <input type="checkbox" class="habit" data-points="10">
+              Turned off lights in empty rooms
+              <span class="points">+10 pts</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" class="habit" data-points="10">
+              Unplugged chargers and devices not in use
+              <span class="points">+10 pts</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" class="habit" data-points="15">
+              Reduced my shower time
+              <span class="points">+15 pts</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" class="habit" data-points="15">
+              Used natural light instead of lamps
+              <span class="points">+15 pts</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" class="habit" data-points="20">
+              Chosen walking, cycling or public transport instead of the car
+              <span class="points">+20 pts</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" class="habit" data-points="20">
+              Sorted waste correctly for recycling (paper, plastic, glass)
+              <span class="points">+20 pts</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Summary / progress bar -->
+      <div class="tracker-summary">
+        <h3>Today’s Eco-points</h3>
+
+        <p class="summary-line">
+          Eco-points collected today:
+          <strong><span id="points-value">0</span> / 90</strong>
+        </p>
+
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+
+        <p class="progress-message" id="progress-message">
+          Start by marking your first habit of the day! 🌱
+        </p>
+
+        <p class="summary-line">
+          Your daily eco-points contribute to your monthly reward level.
+          Check the levels and example benefits below.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REWARD LEVELS SECTION -->
+  <section class="rewards-section">
+    <h2>🎯 Eco-points Reward Levels</h2>
+
+    <p class="why-intro">
+      Many real-world green loyalty programmes reward people for sustainable choices
+      with points that unlock discounts and benefits. In this prototype, your eco-points
+      could work in a similar way: the more you collect, the higher your reward level
+      and the stronger your positive impact.
+    </p>
+
+    <div class="reward-flow">
+      <p>✅ Track habits → 💚 earn eco-points → 🏅 reach new levels → 🎁 unlock green benefits.</p>
+    </div>
+
+    <div class="reward-levels">
+
+      <article class="reward-card level-bronze">
+        <h3>🥉 Bronze — 300+ eco-points / month</h3>
+        <ul>
+          <li>Digital badges and certificates celebrating your green routine.</li>
+          <li>Entry into green prize draws (eco starter kits, reusable items, etc.).</li>
+          <li>Option to donate some of your points to support local environmental projects.</li>
+        </ul>
+      </article>
+
+      <article class="reward-card level-silver">
+        <h3>🥈 Silver — 700+ eco-points / month</h3>
+        <ul>
+          <li><strong>Discounts at partner supermarkets</strong> on eco-friendly products.</li>
+          <li>Recycling-related vouchers (deposit return on bottles, rewarded recycling schemes).</li>
+          <li>Ability to convert points into tree planting or other nature projects.</li>
+        </ul>
+      </article>
+
+      <article class="reward-card level-gold">
+        <h3>🥇 Gold — 1,200+ eco-points / month</h3>
+        <ul>
+          <li>Higher discounts with sustainable brands (mobility, green energy, low-impact products).</li>
+          <li>Access to exclusive events, workshops or early access to green initiatives.</li>
+          <li>Part of your points could finance renewable energy or reforestation projects.</li>
+        </ul>
+      </article>
+
+      <article class="reward-card level-platinum">
+        <h3>🏆 Platinum — 2,000+ eco-points / month</h3>
+        <ul>
+          <li>Combined benefit packs: vouchers, discounts and immersive green experiences.</li>
+          <li>Sponsorship of specific projects (urban gardens, “green schools”, beach clean-ups, etc.).</li>
+          <li>Recognition as a top “Eco Ambassador” within the programme.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sustainable Habits Tracker Team | All Rights Reserved</p>
+  </footer>
+
+  <!-- Simple script to update points and progress bar -->
+  <script>
+    const checkboxes = document.querySelectorAll('.habit');
+    const pointsValue = document.getElementById('points-value');
+    const progressFill = document.getElementById('progress-fill');
+    const progressMessage = document.getElementById('progress-message');
+    const dailyGoal = 90; // maximum sum of points for the day
+
+    function updateProgress() {
+      let total = 0;
+
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          total += Number(cb.getAttribute('data-points'));
+        }
+      });
+
+      pointsValue.textContent = total;
+      const percent = Math.min((total / dailyGoal) * 100, 100);
+      progressFill.style.width = percent + '%';
+
+      if (total === 0) {
+        progressMessage.textContent = 'Start by marking your first habit of the day! 🌱';
+      } else if (total < 40) {
+        progressMessage.textContent = 'Nice start! These eco-points are pushing you towards Bronze level.';
+      } else if (total < 70) {
+        progressMessage.textContent = 'Great job! Days like this help you move closer to Silver level. 💚';
+      } else {
+        progressMessage.textContent = 'Amazing eco-day! Keep this up to reach Gold and even Platinum levels. 🌎';
+      }
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', updateProgress));
+  </script>
+
+</body>
+</html>
